@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+	{% load staticfiles %}
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="{% static 'css/login.css' %}"/>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="{% static 'js/login.js' %}"></script>
+
+</head>
+<html>
+
+    <head>
+        <title>Retro</title>
+    </head>
+
+    <body>
+
+
+
+				                 
+        
+     
+        
+        <!-- New line -->
+				<!-- BEGIN # BOOTSNIP INFO -->
+				<div class="container">
+					<div class="row">
+						 <div class="text-center"><img  src="{% static 'images/fine.jpg' %}" alt="Picture of Rango" /></div>
+						<h1 class="text-center">Welcome to Retrospect</h1>
+				        <p class="text-center"><a href="#" class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Click here to login!</a></p>
+					</div>
+				</div>
+				<!-- END # BOOTSNIP INFO -->
+
+				<!-- BEGIN # MODAL LOGIN -->
+				<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+				    	<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header" align="center">
+									In a couple seconds you'll unlock the doors to heaven!
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+									</button>
+								</div>
+
+				                <!-- Begin # DIV Form -->
+				                <div id="div-forms">
+
+    								 <!-- Begin # Login Form -->
+				                    <form method="post" action="/retrospective/loginUser/" id="login-form">
+								    	{% csrf_token %}
+								    	<input name="login_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+								    	<input name="login_password" class="form-control" type="password" placeholder="Password" required>
+
+				        		    	<input type="submit" value="Submit">
+				                    </form>
+				                    <!-- End # Login Form -->
+				                    
+				                    <!-- Begin | Register Form -->
+				                    <form id="register-form" style="display:none;">
+				            		    <div class="modal-body">
+						    				<div id="div-register-msg">
+				                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+				                                <span id="text-register-msg">Register an account.</span>
+				                            </div>
+						    				<input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+				                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+				                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+				            			</div>
+						    		    <div class="modal-footer">
+				                            <div>
+				                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+				                            </div>
+				                            <div>
+				                                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+				                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+				                            </div>
+						    		    </div>
+				                    </form>
+				                    <!-- End | Register Form -->
+
+				                </div>
+				                <!-- End # DIV Form -->
+
+							</div>
+						</div>
+					</div>
+				    <!-- END # MODAL LOGIN -->
+
+		</body>
+
+</html>

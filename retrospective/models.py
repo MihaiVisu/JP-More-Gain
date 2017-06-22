@@ -1,16 +1,17 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class Team(models.Model):
-    name = models.CharField(max_length=255)
 
 class Coder(models.Model):
 	user = models.OneToOneField(User)
-	team = models.ForeignKey(Team, on_delete=models.CASCADE)
 	manager = models.BooleanField()
 
 	def __unicode__(self):
 		return self.user.username
+
+class Team(models.Model):
+    name = models.CharField(max_length=255)
+    members = models.ManyToManyField(Coder, on_delete=models.CASCADE)
 
 class Retrospective(models.Model):
     name = models.CharField(max_length=255)

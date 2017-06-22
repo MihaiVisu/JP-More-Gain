@@ -20,12 +20,12 @@ def logout_view(request):
     logout(request)
 
 def loginUser(request):
-    print "YES"
-    username = request.POST['username']
-    password = request.POST['password']
-    user = authenticate(request, username, password)
+    print request
+    username = request.POST['login_username']
+    password = request.POST['login_password']
+    user = authenticate(username=username, password=password)
     if user:
-        return HttpResponseRedirect('retrospective/member_form.html')
+        return render(request,"retrospective/member_form.html",{})
     else:
         return HttpResponse()
 

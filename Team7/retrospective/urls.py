@@ -8,5 +8,5 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
     url(r'^$', views.index), # ADD THIS NEW TUPLE!
     url(r'^memberForm$',views.memberForm),
-    url(r'^loginUser$',views.loginUser),
+    url(r'^loginUser/$',views.loginUser),
 )

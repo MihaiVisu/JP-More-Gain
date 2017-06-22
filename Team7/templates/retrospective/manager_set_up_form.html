@@ -40,7 +40,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">JPMC</a>
+                <a class="navbar-brand" href="#">JPMoreGain</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -63,55 +63,55 @@
             <div class="col-md-9 col-centered">
                 <div class="well">
                     <h4>Question 1</h4>
-                    <p>Some text..</p>
                 </div>
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="well">
                             <h4>Question 2</h4>
-                            <p>1 Million</p>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="well">
                             <h4>Question 3</h4>
-                            <p>100 Million</p>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="well">
                             <h4>Question 4</h4>
-                            <p>10 Million</p>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="well">
                             <h4>Question 5</h4>
-                            <p>30%</p>
                         </div>
                     </div>
                 </div>
+                
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div id="lastRow">
+                    <div class="col-xs-2">
                         <div class="well">
                             <h4>Question 6</h4>
-                            <p>Text</p>
                         </div>
                     </div>
-                    <div class="col-xs-2" >
+                    </div>
+                    <div class="col-xs-2">
                         <div class="well" style="text-align:center;">
-                            <button type="button" class="btn btn-primary" aria-label="Left Align" >
+                            <button type="button" class="btn btn-primary" aria-label="Left Align" onclick="displayInput()">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                             </button>
+
                         </div>
                     </div>
+                </div>
+                <div class="well" id="inputField" style="visibility:hidden">
+                        <input type="text" id="newQuestion" class="form-control" aria-label="">
+                    <button  value="Submit" class="btn-primary" onclick="addQuestion()">Submit</button>
                 </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <a href="/retrospective/meeting" class="btn btn-default btn-block" role="button">Submit</a>
 
     <style>
         .col-centered {
@@ -120,5 +120,20 @@
             margin-left: auto;
         }
     </style>
+    <script>
+        function addQuestion() {
+            var e = document.createElement('div');
+            var q = document.getElementById("newQuestion").value;
+            e.innerHTML = '<div class="col-xs-2"><div class="well"><h4>'+q+'</h4></div></div >';
+            document.getElementById("lastRow").appendChild(e.firstChild);
+            document.getElementById("inputField").style.visibility = 'hidden';
+
+        }
+        function displayInput() {
+
+            document.getElementById("newQuestion").value = "";
+            document.getElementById("inputField").style.visibility = 'visible';
+        }
+    </script>
 </body>
 </html>

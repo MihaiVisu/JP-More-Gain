@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth import login, authenticate
+from retrospective.models import *
 
+questions = []
 
 def index(request):
 
@@ -25,7 +27,6 @@ def meeting(request):
     return render(request,"retrospective/meeting.html",{})
 
 def loginUser(request):
-    print request
     username = request.POST['login_username']
     password = request.POST['login_password']
     user = authenticate(username=username, password=password)
@@ -46,3 +47,8 @@ def memberForm(request):
     # Note that the first parameter is the template we wish to use.
 
     return render(request, 'retrospective/member_form.html', context_dict)
+
+
+def addQuestion(request):
+    questions += request.POST["question"]
+    print questions

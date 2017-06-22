@@ -11,4 +11,5 @@ urlpatterns = patterns('',
     url(r'^loginUser/$',views.loginUser),
     url(r'^manager_set_up_form/$',views.manager_set_up_form),
     url(r'^meeting/$',views.meeting),
+    url(r'^addQuestion/$',views.addQuestion),
 )

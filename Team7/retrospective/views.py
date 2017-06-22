@@ -15,9 +15,14 @@ def index(request):
 
     return render(request, 'retrospective/login.html', context_dict)
 
+def manager_set_up_form(request):
+    return render(request,'retrospective/manager_set_up_form.html',{})
 
 def logout_view(request):
     logout(request)
+
+def meeting(request):
+    return render(request,"retrospective/meeting.html",{})
 
 def loginUser(request):
     print request
@@ -25,7 +30,7 @@ def loginUser(request):
     password = request.POST['login_password']
     user = authenticate(username=username, password=password)
     if user:
-        return render(request,"retrospective/member_form.html",{})
+        return render(request,"retrospective/dashboard.html",{})
     else:
         return HttpResponse()
 

@@ -15,7 +15,7 @@ def index(request):
 
     return render(request, 'retrospective/index.html', context_dict)
 
-def login_view(request):
+def login(request):
     username = request.POST['username']
     password = request.POST['password']
     user = authenticate(request, username, password)

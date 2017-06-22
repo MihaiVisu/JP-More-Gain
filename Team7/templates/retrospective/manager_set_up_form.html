@@ -29,25 +29,29 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-inverse visible-xs">
+
+    <nav class="navbar navbar-default">
         <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Logo</a>
+                <a class="navbar-brand" href="#">JPMC</a>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Dashboard</a></li>
-                    <li><a href="#">Age</a></li>
-                    <li><a href="#">Gender</a></li>
-                    <li><a href="#">Geo</a></li>
                 </ul>
-            </div>
-        </div>
+                
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    
     </nav>
 
     <div class="container-fluid" >
@@ -55,7 +59,8 @@
             
             <br>
        <div style="text-align:center;">
-            <div class="col-sm-9">
+           <h2> Create Questions</h2>
+            <div class="col-md-9 col-centered">
                 <div class="well">
                     <h4>Question 1</h4>
                     <p>Some text..</p>
@@ -93,7 +98,7 @@
                             <p>Text</p>
                         </div>
                     </div>
-                    <div class="col-xs-1" >
+                    <div class="col-xs-2" >
                         <div class="well" style="text-align:center;">
                             <button type="button" class="btn btn-primary" aria-label="Left Align" >
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
@@ -106,5 +111,12 @@
         </div>
     </div>
 
+    <style>
+        .col-centered {
+            float: none;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
 </body>
 </html>

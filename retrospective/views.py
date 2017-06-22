@@ -1,6 +1,6 @@
 from django.shortcuts import render
-<<<<<<< HEAD
 from django.http import HttpResponse
+from django.contrib.auth import login, authenticate
 
 def index(request):
 
@@ -13,9 +13,6 @@ def index(request):
     # Note that the first parameter is the template we wish to use.
 
     return render(request, 'retrospective/index.html', context_dict)
-=======
-from django.contrib.auth import login, authenticate
-
 
 def login_view(request):
     username = request.POST['username']
@@ -29,4 +26,3 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
->>>>>>> a2b4d2358c0d8e0989d834c293dba6d0d9bfb2e3

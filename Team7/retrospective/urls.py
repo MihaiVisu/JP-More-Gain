@@ -1,9 +1,6 @@
-from django.conf.urls import url,include,patterns
+from django.conf.urls import patterns, include, url
+from django.contrib import admin
 from retrospective import views
-
-# urlpatterns = [
-# 	url(r'^$',views.index),
-# ]
 
 urlpatterns = patterns('',
     # Examples:

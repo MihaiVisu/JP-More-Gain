@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth import login, authenticate
+
 
 def index(request):
 
@@ -19,9 +20,9 @@ def login_view(request):
     password = request.POST['password']
     user = authenticate(request, username, password)
     if user:
-        return 'SUCCESS'
+        return HttpResponseRedirect('retrospective/dashboard/')
     else:
-        return 'INCORRECT LOGIN'
+        return HttpResponse()
 
 
 def logout_view(request):

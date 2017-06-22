@@ -13,21 +13,21 @@ def index(request):
     # We make use of the shortcut function to make our lives easier.
     # Note that the first parameter is the template we wish to use.
 
-    return render(request, 'retrospective/index.html', context_dict)
-
-def login(request):
-    username = request.POST['username']
-    password = request.POST['password']
-    user = authenticate(request, username, password)
-    if user:
-        return HttpResponseRedirect('retrospective/dashboard/')
-    else:
-        return HttpResponse()
+    return render(request, 'retrospective/login.html', context_dict)
 
 
 def logout_view(request):
     logout(request)
 
+def loginUser(request):
+    print "YES"
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username, password)
+    if user:
+        return HttpResponseRedirect('retrospective/member_form.html')
+    else:
+        return HttpResponse()
 
 
 def memberForm(request):

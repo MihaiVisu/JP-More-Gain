@@ -9,4 +9,6 @@ urlpatterns = patterns('',
     url(r'^$', views.index), # ADD THIS NEW TUPLE!
     url(r'^memberForm$',views.memberForm),
     url(r'^loginUser/$',views.loginUser),
+    url(r'^manager_set_up_form/$',views.manager_set_up_form),
+    url(r'^meeting/$',views.meeting),
 )

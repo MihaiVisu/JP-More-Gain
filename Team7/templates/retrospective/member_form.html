@@ -18,17 +18,58 @@
 <link rel="stylesheet" href="/static/css/slider.css">
 
 <script type="text/javascript" src="/static/js/slider.js"></script>
+<style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {
+        height: 550px
+    }
 
+    /* Set gray background color and 100% height */
+    .sidenav {
+        background-color: #f1f1f1;
+        height: 100%;
+    }
+
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+        .row.content {
+            height: auto;
+        }
+    }
+</style>
 </head>
 
 
 <body>
+	<nav class="navbar navbar-default">
+			<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">JPMC</a>
+					</div>
 
-<h1>JPMoreGain - The home of Modern Retros</h1>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+							</ul>
 
-<h2>Name of the Retroperspective</h2>
+					</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+	</nav>
 
+	</nav>
+<h1>Retrospective #1</h1>
 
+<div class="container">
+	<div class="col-md-12 col-centered">
+		<div class="row">
+				<div class="col-sm-6">
 <h3>Multiple Answer</h3>
 
 <div class="panel panel-default">
@@ -149,7 +190,7 @@
 
 </div>
 
-
+<div class="col-sm-6">
 <h3>Scale</h3>
 <ul>
 	<br>
@@ -187,12 +228,15 @@
 
 
 </ul>
-
-<h3>Open Feedback</h3>
-
-<div>
 </div>
-
+</div>
+</div>
+<div class="row">
+		<div class="col-sm-12">
+<h3>Open Feedback</h3>
+</div>
+</div>
+</div>
 
 <script type="text/javascript">
 $("#ex1").slider();

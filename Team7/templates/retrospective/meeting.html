@@ -3,10 +3,8 @@
 <title>JPMoreGain</title>
 
 <style type="text/css">
-    .containers {
-        border: 1px solid red;
-        width: 300px;
-        height: 400px;
+    .contain {
+/*        min-height: 35% !important;*/
     }
 
     .headers {
@@ -32,36 +30,42 @@
 
 
 <body>
+    <div class="container-fluid">
+        <h1 class="headers">JPMoreGain - The home of Modern Retros</h1>
 
-    <h1 class="headers">JPMoreGain - The home of Modern Retros</h1>
+        <h2 class="headers">Meeting</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5 offset-md-2 container contain well">
+                    <h3>Questions</h3>
+                    <ul>
+                        <li>Mark asked: <br>Can you juggle??</li>
+                        <li>Lianne asked: <br>Are you a good employee?</li>
+                        <li>Frank asked: <br>What's your favourite girl group?</li>
+                        <li>Claire asked: <br>Have you ever built a snowman?</li>
+                    </ul>
+                </div>
+                <div class="col-md-5 offset-md-2 containers contain well">
+                    <h3>Comments</h3>
+                    <textarea rows="8" cols="50"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5 offset-md-2 containers contain well">
+                    <h3>Previous Iteration</h3>
+                </div>
+                <div class="col-md-5 offset-md-2 containers contain well">
+                    <h3>Next Iteration</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 offset-md-8">
+                    <button class="btn btn-primary">Save</button><button class="btn btn-success">Submit</button> 
+                </div>
+            </div>
 
-    <h2 class="headers">Meeting</h2>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5 container jumbotron">
-                <h3>Questions</h3>
-                <ul>
-                    <li>Mark asked: <br>Question 1</li>
-                    <li>Lianne asked: <br>Question 2</li>
-                    <li>Frank asked: <br>Question 3</li>
-                    <li>Claire asked: <br>Question 4</li>
-
-                </ul>
-
-            </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-5 offset-sm-2 jumbotron">
-                <h3>Comments</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-5 container jumbotron">
-                <h3>Previous Iteration</h3>
-            </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-5 container jumbotron">
-                <h3>Next Iteration</h3>
-            </div>
         </div>
     </div>
 

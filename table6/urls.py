@@ -13,10 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls import url,include,patterns
 
-urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^retrospective/','retrospective/urls'),
-]
+# urlpatterns = [
+#     url(r'^admin/', admin.site.urls),
+#     url(r'^retrospective/',include('retrospective/urls')),
+# ]
+
+urlpatterns = patterns('',
+    # Examples:
+    # url(r'^$', 'tango_with_django_project_17.views.home', name='home'),
+    # url(r'^blog/', include('blog.urls')),
+
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^retrospective/', include('retrospective.urls')), # ADD THIS NEW TUPLE!
+)
